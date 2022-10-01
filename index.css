@@ -6,6 +6,10 @@
 html{
 	scroll-behavior: smooth;
 	overflow-x: hidden;
+    user-select: none; /* L'utilisateur ne pourra plus sélectionner le texte de l'élément qui possède cette propriété CSS */
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
 }
 
 body {
@@ -280,6 +284,154 @@ body {
         width: 100%;
         height: 100px;
     }
+
+    #logo{
+        width: 70px; 
+    }
+
+    #logo_a{
+        z-index: 1;
+        position: inherit; 
+        top: 2%;
+        left: 1%;
+    }
+    
+    .NavHome{
+        animation: fadein 1s;
+        -moz-animation: fadein 1s;
+        z-index: 1;
+    }
+        
+    .NavAbout{
+        animation: fadein 1.25s;
+        -moz-animation: fadein 1.25s;
+    }
+    
+    .NavProjects{
+        animation: fadein 1.5s;
+        -moz-animation: fadein 1.5s;
+    }
+    
+    .NavSkills{
+        animation: fadein 1.75s;
+        -moz-animation: fadein 1.75s;
+    }
+    
+    .NavExperience{
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+    }
+    
+    .NavContact{
+        margin-right: 10px;
+        border-radius: 40px;
+        border: 2px solid #d679ed;
+        padding: 10px 20px 10px 20px;
+        animation: fadein 2.25s;
+        -moz-animation: fadein 2.25s;
+    }
+    
+    .NavContact:hover{
+        background-color: rgba(214, 121, 237, 0.2);
+        transition-delay: 150ms;
+    }
+
+    .NavContact:hover .RecNavContact{
+        width: 20px;
+        opacity: 1;
+        transform: translateX(5px);
+        background-color: #d679ed;
+    }    
+
+    .RecNavContact {
+        height: 10px;
+        width: 10px;
+        background-color: red;
+        border-radius: 10px;
+    }
+
+    .closebtn { /* Bouton en opacité 0 sur Home*/
+        opacity: 0;
+        position: relative;
+        left: 60px;
+        top: 0;
+        z-index: 0;
+        background-color: black;
+    }
+
+    .sidenav {
+        width: 100%;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        opacity: .70;
+        margin-top: 40px;
+        margin-left: 10px;
+        text-align: right;
+    }
+
+    .sidenav a {
+        color: white;
+        font-family: Gill Sans, sans-serif;
+        font-weight: 700;        
+        font-size: 16px;
+        text-decoration: none;
+        margin: 20px;
+        padding-top: -10px;
+    }
+
+    .sidenav a:hover {
+        color: #d679ed;
+    }
+
+    #icoOpen{
+        background-color: red;
+        opacity: 0;
+        width: 10px;
+        height: 10px;
+        position: relative;
+        top: 0;
+        left: 50px;
+        z-index: 0;
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+            margin-top: 50px;
+        }
+        to {
+            opacity: 1;
+            margin-top: 0px;
+        }
+    }
+}
+
+@media screen and (min-device-width : 1825px) {
+    body{
+	    width: 100%;
+    }
+
+    .header_div{
+        display: flex;
+        position: fixed;
+        align-items: center;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100px;
+    }
+
+    #logo{
+        width: 70px; 
+    }
+
+    #logo_a{
+        z-index: 1;
+        position: inherit; 
+        top: 2%;
+        left: 1%;
+    }
     
     .NavHome{
         animation: fadein 1s;
@@ -337,7 +489,7 @@ body {
     .closebtn { /* Bouton en opacité 0 sur Home*/
         opacity: 0;
         position: relative;
-        left: 40px;
+        left: 60px;
         top: 0;
         z-index: 0;
         background-color: black;
@@ -378,47 +530,10 @@ body {
             margin-top: 0px;
         }
     }
-}
-
-@media screen and (min-device-width : 1825px) {
-    body{
-	    width: 100%;
-    }
-
-    .header_div{
-        display: flex;
-        position: fixed;
-        align-items: center;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100px;
-    }
-    
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 50px;
-        width: 100%;
-        height: 100px;  
-    }
-    
-    .menu{
-        display: block;
-    }
-    
-    ol{
-        list-style: none;
-    }
-
-    #icoOpen{
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
 }    
 
 /* Liste des problèmes :
     - Ma rotation écran se passe sans rien faire à 700px de large
     - 
+
+    
