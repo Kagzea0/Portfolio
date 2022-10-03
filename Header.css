@@ -12,9 +12,13 @@ html{
     -webkit-user-select: none;
 }
 
+body, html{
+    display: block;
+    min-width: 300px;
+}
+
 body {
     height: 100vh;
-    min-width: 300px;
     background: linear-gradient(#0c102c,#383077);
 }
 
