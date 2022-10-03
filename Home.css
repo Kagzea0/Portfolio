@@ -6,7 +6,7 @@
 html{
 	scroll-behavior: smooth;
 	overflow-x: hidden;
-    user-select: none; /* L'utilisateur ne pourra plus sélectionner le texte de l'élément qui possède cette propriété CSS */
+    user-select: none; 
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
