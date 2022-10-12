@@ -235,14 +235,14 @@ body {
         text-decoration: none;
         opacity: 0.92;
         font-size: 20px;
-        color: #c4bcbc;
+        color: white;
         display: block;
         transition: 0.2s;
     }
     
     /* When you mouse over the navigation links, change their color */
     .sidenav a:hover, .offcanvas a:focus {
-        color: #fff;
+        color: #d679ed;
     }
     
     /* Position and style the close button (top right corner) */
@@ -381,10 +381,16 @@ body {
         background-color: white;
         position: absolute;
         right: 20px;
-        top: -10px;
+        top: -20px;
         border-radius: 10px;
         animation: recNavCon 2.25s;
         -moz-animation: recNavCon 2.25s;
+    }
+
+    .NavContact:hover + .RecNavContact{
+        width: 20px;
+        background-color: #d679ed;
+        right: 15px;
     }
 
     .closebtn { /* Bouton en opacité 0 sur Home*/
@@ -413,7 +419,7 @@ body {
         font-weight: 700;        
         font-size: 16px;
         text-decoration: none;
-        margin: 15px;
+        margin: 25px;
         padding-top: -10px;
     }
 
@@ -457,11 +463,9 @@ body {
     @keyframes recNavCon {
         from {
             opacity: 0;
-            margin-bottom: 50px;
         }
         to {
             opacity: 1;
-            margin-top: 15px;
         }
     }
 }
@@ -634,7 +638,7 @@ body {
 }    
 
 /* Liste des problèmes :
-    - Ma rotation écran se passe sans rien faire à 700px de large
+    - Ma rotation écran se passe sans rien faire à 480-482px de large
     - 
 
     
