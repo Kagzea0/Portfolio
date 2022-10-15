@@ -16,9 +16,13 @@ html{
     -webkit-user-select: none;
 }
 
+body, html{
+    display: block;
+    min-width: 300px;
+}
+
 body {
     height: 100vh;
-    min-width: 300px;
     background: linear-gradient(#0c102c,#383077);
 }
 
@@ -210,19 +214,18 @@ body {
     }
 
     #logo{
-        width: 70px; 
+        width: 50px; 
     }
 
     #logo_a{
         z-index: 1;
         position: absolute; 
-        top: 2%;
+        top: 1%;
         right: 1%;
     }
     
     /* The side navigation menu */
     .sidenav {
-        height: 660px;    /* 100% Full-height */
         width: 0;    /* 0 width - change this with JavaScript */
         position: absolute;    /* Stay in place */
         z-index: 1;    /* Stay on top */
@@ -255,6 +258,188 @@ body {
         top: 0;
         opacity: 0;
         right: 220px;
+        font-size: 20px;
+        margin-left: 50px;
+    }
+    
+    /* Style page content - use this if you want to push the page content to the 
+    right when you open the side navigation */
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+        overflow: hidden;
+        width: 290px;
+    }
+    
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        float: left;
+        display: block;
+        color: #c4bcbc;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    
+    /* Change the color of links on hover */
+    .topnav a:hover {
+        background: none;
+        color: #c4bcbc;
+    }
+    
+    /* Add a color to the active/current link */
+    .topnav a.active {
+        background: none;
+        color: #c4bcbc;
+    }
+
+    #icoOpen{
+        height: 30px;
+        width: 30px;
+    }
+}
+    
+@media screen and (min-device-width : 481px) and (max-device-width : 767px) {
+
+    #logo{
+        width: 60px; 
+    }
+
+    #logo_a{
+        z-index: 1;
+        position: absolute; 
+        top: 1%;
+        right: 0.5%;
+    }
+    
+    /* The side navigation menu */
+    .sidenav {
+        width: 0;    /* 0 width - change this with JavaScript */
+        position: absolute;    /* Stay in place */
+        z-index: 1;    /* Stay on top */
+        top: 0;
+        left: 0;
+        overflow-x: hidden;    /* Disable horizontal scroll */
+        padding-top: 50px;    /* Place content 60px from the top */
+        transition: 0.5s;    /* 0.5 second transition effect to slide in the sidenav */
+    }
+    
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 20px;
+        text-decoration: none;
+        opacity: 0.92;
+        font-size: 20px;
+        color: #c4bcbc;
+        display: block;
+        transition: 0.2s;
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover, .offcanvas a:focus {
+        color: #fff;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        right: 120px;
+        font-size: 20px;
+        margin-left: 50px;
+    }
+    
+    /* Style page content - use this if you want to push the page content to the 
+    right when you open the side navigation */
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+        overflow: hidden;
+        width: 290px;
+    }
+    
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        float: left;
+        display: block;
+        color: #c4bcbc;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    
+    /* Change the color of links on hover */
+    .topnav a:hover {
+        background: none;
+        color: #c4bcbc;
+    }
+    
+    /* Add a color to the active/current link */
+    .topnav a.active {
+        background: none;
+        color: #c4bcbc;
+    }
+
+    #icoOpen{
+        height: 40px;
+        width: 40px;
+    }
+}
+
+@media screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    body {
+        max-height: 1100px;
+    }
+
+    #logo{
+        width: 60px; 
+    }
+
+    #logo_a{
+        z-index: 1;
+        position: absolute; 
+        top: 1%;
+        right: 0.5%;
+    }
+    
+    /* The side navigation menu */
+    .sidenav {
+        width: 0;    /* 0 width - change this with JavaScript */
+        position: absolute;    /* Stay in place */
+        z-index: 1;    /* Stay on top */
+        top: 0;
+        left: 0;
+        overflow-x: hidden;    /* Disable horizontal scroll */
+        padding-top: 50px;    /* Place content 60px from the top */
+        transition: 0.5s;    /* 0.5 second transition effect to slide in the sidenav */
+    }
+    
+    /* The navigation menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 20px;
+        text-decoration: none;
+        opacity: 0.92;
+        font-size: 20px;
+        color: white;
+        display: block;
+        transition: 0.2s;
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover, .offcanvas a:focus {
+        color: #d679ed;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        right: 120px;
         font-size: 20px;
         margin-left: 50px;
     }
@@ -385,10 +570,16 @@ body {
         background-color: white;
         position: absolute;
         right: 20px;
-        top: -10px;
+        top: -20px;
         border-radius: 10px;
         animation: recNavCon 2.25s;
         -moz-animation: recNavCon 2.25s;
+    }
+
+    .NavContact:hover + .RecNavContact{
+        width: 20px;
+        background-color: #d679ed;
+        right: 15px;
     }
 
     .closebtn { /* Bouton en opacité 0 sur Home*/
@@ -417,7 +608,7 @@ body {
         font-weight: 700;        
         font-size: 16px;
         text-decoration: none;
-        margin: 15px;
+        margin: 25px;
         padding-top: -10px;
     }
 
@@ -461,11 +652,9 @@ body {
     @keyframes recNavCon {
         from {
             opacity: 0;
-            margin-bottom: 50px;
         }
         to {
             opacity: 1;
-            margin-top: 15px;
         }
     }
 }
@@ -638,7 +827,7 @@ body {
 }    
 
 /* Liste des problèmes :
-    - Ma rotation écran se passe sans rien faire à 700px de large
+    - Ma rotation écran se passe sans rien faire à 480-482px de large
     - 
 
     
